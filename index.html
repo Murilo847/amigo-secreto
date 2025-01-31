@@ -57,13 +57,14 @@
 
        function sortearAmigo(){
         
-        if (listaNomes.length > 0) {
+        if (listaNomes.length > 1) {
             let randomNumber = Math.floor(Math.random() * listaNomes.length);
             let nomeSorteadx = listaNomes[randomNumber];
             ul_resultado.innerHTML = `O amigo sorteado foi ${nomeSorteadx}`;
             ul_nomes.innerHTML = '';
-            listaNomes.splice(0, listaNomes.length); 
-            
+            listaNomes.splice(0, listaNomes.length);   
+        } else{
+            alert("Adicione pelo menos 2 nomes");
         }
         }
        
